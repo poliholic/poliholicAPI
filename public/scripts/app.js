@@ -1,5 +1,24 @@
 console.log("Bueller? Bueller? Bueller?");
 
+$(function() {
+// Get page title
+  var pageTitle = $("title").text();
+
+// Change page title  and favicon on blur
+$(window).blur(function() {
+  $("title").text("Where are you!?!");
+  $("#favicon").attr("href","images/wtf.ico");
+});
+
+// Change page title back on focus
+$(window).focus(function() {
+  $("title").text(pageTitle);
+  $("#favicon").attr("href","images/supe_favicon.ico");
+});
+});
+
+
+
 //trying the pop up
 $(function() {
     //----- OPEN
